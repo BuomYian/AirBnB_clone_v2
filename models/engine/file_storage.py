@@ -57,7 +57,7 @@ class FileStorage:
             pass
 
     def delete(self, obj=None):
-		''' deletes the object obj from the attribute _objects if it's inside it
+        ''' deletes the object obj from the attribute _objects if it's inside it
         '''
         if obj is None:
             return
