@@ -7,7 +7,6 @@ from fabric.api import run, local, cd, env
 import os
 
 
-
 def do_clean(number=0):
     """Cleans all .tgz files"""
 
