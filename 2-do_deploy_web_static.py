@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Fabric script that distributes an archive to web servers"""
+""""Fabric script that distributes an archive to web servers"""
 
 from fabric.api import *
 import os
@@ -26,7 +26,7 @@ def do_deploy(archive_path):
 
                 """Run remote commands on the server"""
                 run('mkdir -p {}'.format(uncomp_fold))
-                run('tar -xvzf {} -c {}'.format(tmp_location, uncomp_fold))
+                run('tar -xvzf {} -C {}'.format(tmp_location, uncomp_fold))
                 run('rm {}'.format(tmp_location))
                 run('mv {}/web_static/* {}'.format(uncomp_fold, uncomp_fold))
                 run('rm -rf {}/web_static'.format(uncomp_fold))
